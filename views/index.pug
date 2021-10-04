@@ -1,0 +1,112 @@
+extends layout
+
+block content
+  //loader section
+  .loader-contn 
+    h2   
+      i.fa.fa-envelope(aria-hidden='true')
+      span.pl-2 #{title}
+  //small & wide screen header section
+  .container-fluid.header.section
+    .row
+      .col-6.col-md-8.brand.p-3.py-4
+        a(href="/") 
+          i.fa.fa-envelope(aria-hidden='true')
+          span.pl-2 #{title}
+      .col-4.col-md-4.px-2.pt-2.text-center.text-md-right.d-block.d-md-none
+        button.compose.hide
+          i.fa.fa-plus
+          span.pl-2 New
+      .col-2.p-3.text-right.d-block.d-md-none
+        button.menu.true
+          i.fa.fa-bars      
+      .col-md-4.d-none.d-md-block.p-3.py-3
+        .lg-nav 
+          nav.nav.justify-content-end
+            //li.nav-item
+              button.nav-link(type="button" title="Help").px-2
+                img(src="images/icons/help_outline.png", alt="?")
+            li.nav-item.setting
+              button.nav-link(type="button" title="Settings").px-2.cog
+                img(src="images/icons/Apps.png", alt="Settings")
+              .settings.hide
+                nav.nav.flex-column
+                  li.nav-item.setting-item.px-3.py-2
+                    img(src="images/icons/settings.png", alt="Settings").pr-2 
+                    span Settings
+                  li.nav-item.setting-item.px-3.py-2
+                    img(src="images/icons/help_outline.png", alt="?").pr-2
+                    span How to use?
+  .container-fluid.menu-contn.d-block.d-md-none.px-0
+    //small screen menu section
+    .menu-box.container-fluid.p-0
+      nav.nav.flex-column
+        li.nav-item.active
+          a.nav-link(href='#') 
+            i.fa.fa-paper-plane.pr-2(aria-hidden='true')
+            |Sent
+            span.item-amount.sents 3
+        li.nav-item.disabled
+          a.nav-link(href='#', tabindex='-1') 
+            i.fa.fa-file.pr-2(aria-hidden='true')
+            |Drafts
+            span.item-amount.drafts 2
+  .main-contn
+    .d-none.d-md-block.menu-box.menu-box-w
+      //wide screen menu section
+      .container-fluid.p-0
+        nav.nav.flex-column.py-3.pr-3.text-left
+          li.nav-item
+            button.compose.hide
+              i.fa.fa-plus
+              span.pl-2 New
+          li.nav-item.active
+            a.nav-link(href='#') 
+              i.fa.fa-paper-plane.pr-2(aria-hidden='true')
+              |Sent
+              span.item-amount.sents 3
+          li.nav-item.disabled
+            a.nav-link(href='#', tabindex='-1') 
+              i.fa.fa-file.pr-2(aria-hidden='true')
+              |Drafts
+              span.item-amount.drafts 2
+    //main
+    .main-box.p-4
+      .composer
+        form
+          .composer-header
+            .container-fluid 
+              .row 
+                .col-8.py-2
+                  p New Message 
+                .col-4.text-right.py-2.composer-header-btns
+                  button(type="button").minimize.hide
+                    i.fa.fa-minus(aria-hidden='true')
+                  button(type="button").maximize
+                    i.fa.fa-window-maximize(aria-hidden='true')
+                  button(type="button").clear
+                    i.fa.fa-times(aria-hidden='true')
+          .composer-body.px-3
+            .col-12.p-0
+              .row 
+                .col-9 
+                  input(type="text" placeholder="Recipients" required)
+                .col-3
+                  input(type="text" placeholder="Cc Bcc")
+            .col-12.p-0
+              .row 
+                .container-fluid
+                  input(type="text" placeholder="Subject" required)
+            .container-fluid.px-0
+              .row 
+                .container-fluid
+                  textarea#body-text(name="body" placeholder="Body Text" required) 
+          .composer-footer
+            .container-fluid.py-2
+              .row 
+                .col-6
+                  button(type="submit" title="Send mail")
+                    |send 
+                .col-6.text-right 
+                  button(type="button" title="Delete").clear
+                    i.fa.fa-trash(aria-hidden='true')

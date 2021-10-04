@@ -1,0 +1,255 @@
+body {
+  font-family: 'Poppins' !important;
+  height: 100vh;
+  overflow-y: hidden !important;
+  position: fixed;
+  width: 100%;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  color: #00B7FF;
+  cursor: pointer;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(../webfonts/Poppins-Regular.ttf);
+}
+
+
+@font-face {
+  font-family: 'Poppins light';
+  src: url(../webfonts/Poppins-Light.ttf);
+}
+
+
+@font-face {
+  font-family: 'Poppins bold';
+  src: url(../webfonts/Poppins-Bold.ttf);
+}
+
+.font {
+  font-family: 'Poppins';
+}
+
+.font-light {
+  font-family: 'Poppins light';
+}
+
+.font-bold {
+  font-family: 'Poppins bold';
+}
+
+.regular-size {
+  font-size: 16px;
+}
+
+.light-size {
+  font-size: 14px;
+}
+
+.header {
+  box-shadow: 0px 0px 5px #00000033;
+  background: white;
+  z-index: 20;
+  position: fixed;
+}
+
+.header a {
+  color: inherit;
+}
+
+.header a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu {
+  font-size: 1.5em;
+}
+
+.compose {
+padding: 12px 20px 12px 12px;
+background: #FFFFFF;
+box-shadow: 0px 0px 3px #00000033;
+border-radius: 40px;
+font-size: medium;
+}
+
+.loader-contn {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: white;
+  z-index: 100;
+  height: 100%;
+}
+
+.menu-contn {
+  padding-top: 75px;
+}
+
+.menu-box {
+  background: #0000007a;
+  color: white;
+}
+
+.menu-box a {
+  color: unset;
+  padding: 15px;
+}
+
+.menu-box a:hover {
+  color: white;
+}
+
+.menu-box li.disabled {
+  color: #ffffffa4 !important;
+}
+
+.menu-box li.active {
+  background: #00000052;
+  color: white !important;
+}
+
+.menu-box li:hover {
+  background: #0000007a;
+  color: white !important;
+}
+
+.menu-box li:hover> a {
+  color: white !important;
+}
+
+.item-amount {
+  float: right;
+}
+
+.main-contn {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden !important;
+}
+
+.main-box {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-image: url(../images/logos/logo.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+.main-box::-webkit-scrollbar {
+  display: none;
+}
+
+.composer-header {
+  background: #424242;
+  height: 40px;
+  border-radius: 8px 8px 0px 0px;
+  color: white;
+}
+
+.composer-body {
+  background: white;
+  border-left: 1px solid #424242;
+  border-right: 1px solid #424242;
+  overflow-y: hidden;
+}
+
+
+.composer-footer {
+  height: fit-content;
+  background: #424242;
+  border-radius: 0px 0px 4px 4px;
+  color: white;
+}
+
+.composer-footer button {
+  color: white;
+}
+
+.composer-footer button[type=submit] {
+  background: #7B61FF;
+  border-radius: 4px;
+  padding: 5px 15px 5px 15px;
+  text-transform: capitalize;
+}
+
+.hide {
+  display: none;
+}
+
+.fade-out {
+  display: none !important;
+}
+
+.composer-header-btns button {
+  color: white;
+}
+
+.composer-header-btns button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.composer-body .col-12 {
+  border-bottom: 1px solid #4242422f;
+}
+
+.composer-body .col-12 input {
+  border: none !important;
+  outline: none;
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
+}
+
+.composer-body textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.composer-body textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.settings {
+  position: absolute;
+  width: fit-content;
+  background: white;
+  box-shadow: 0 0 5px #42424273;
+  right: 0;
+  top: 75px;
+  border-radius: 4px;
+}
+
+.settings li {
+  cursor: pointer;
+}

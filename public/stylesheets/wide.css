@@ -1,0 +1,88 @@
+@media only screen and (min-width: 768px) {
+    .section {
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+
+    .menu-box-w {
+        width: 250px;
+        height: 100vh;
+        box-shadow: 3px 3px 5px 0px #00000033;
+        background: white;
+    }
+
+    .menu-box-w div {
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        align-items: flex-start;
+        height: 100%
+    }
+
+    .menu-box-w nav {
+        width: 100%;
+    }
+
+    .menu-box-w li {
+        text-align: left;
+        width: 100%;
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+        border-bottom-right-radius: 25px;
+        border-top-right-radius: 25px;
+        padding: 10px;
+    }
+
+    .menu-box-w a {
+        color: unset;
+        padding: 0;
+    }
+
+    .menu-box-w a:hover {
+        color: white;
+    }
+
+    .menu-box-w li:first-child {
+        border: none !important;
+        margin-bottom: 15px;
+    }
+
+    .menu-box-w li:first-child:hover {
+        border: none !important;
+        margin-bottom: 15px;
+        background: none;
+        color: none !important;
+    }
+
+    .menu-box-w li.active {
+        background: #00000052;
+        color: white !important;
+    }
+
+    .menu-box-w li:hover {
+        background: #0000007a;
+        color: white !important;
+    }
+
+    .menu-box-w li:hover> a {
+        color: white !important;
+    }
+    
+    .menu-box li.disabled {
+        color: #0000007a !important;
+    }
+
+    
+    .main-contn {
+        padding-top: 75px;
+    }  
+
+    .composer {
+        width: 600px;
+    }
+
+    .composer-body textarea {
+        height: 350px;
+    }
+}
+@media only screen and (min-width: 1200px) {}

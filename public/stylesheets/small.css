@@ -1,0 +1,22 @@
+@media only screen and (max-width: 768px) {
+    .section {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .compose {
+        margin-top: 5px;
+    }
+
+    .composer {
+        width: 100%;
+    }
+
+    .composer-body {
+        height: fit-content !important;
+    }
+
+    .composer-body textarea {
+        height: 150px;
+    }
+}
