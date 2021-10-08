@@ -37,6 +37,15 @@ const composer = $('.composer'),
     clear = $('.clear'),
     compose = $('.compose');
 
+$('.composer-header').on('dblclick', () => {
+    let comp = localStorage.getItem('composer');
+    if (comp !== 'maximized') {
+        maxComposer()
+    } else {
+        minComposer()
+    }
+})
+
 maximize.on('click', ()=> {
     maxComposer()
 })
@@ -108,3 +117,39 @@ Compose = function () {
     localStorage.setItem('composerContn', 'open')
     compose.fadeOut('fast')
 }
+
+$('form').on('submit', function (e) {
+    e.preventDefault()
+    $(this).find(':submit').html('<i class="fa fa-spinner fa-spin"></i>')
+    composer.find('input, textarea, button').attr('disabled', true)
+   
+    $.ajax({
+        method: 'POST',
+        url: '/send-email',
+        data: {
+            recipients: $('.recipients').val(),
+            cc: $('.cc').val(),
+            subject: $('.subject').val(),
+            body: $('.body-text').val()
+        },
+        success: function name(result) {
+            $('.send').html('sent')
+            setTimeout(() => {
+                $('.send').html('send')
+            }, 1000);
+            composer.find('input, textarea, button').attr('disabled', false).val('')
+        },
+        error: function (result) {
+            $('.send').html('send')
+            composer.find('input, textarea, button').attr('disabled', false)
+        }
+    })
+})
+
+$('.recipients').on('keyup', function(e){
+    if (e.keyCode == 8) {
+        console.log('backspace')
+    } else if (e.keyCode == 32) {
+        console.log('spacebar')
+    }
+})

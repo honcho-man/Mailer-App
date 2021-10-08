@@ -90,23 +90,25 @@ block content
             .col-12.p-0
               .row 
                 .col-9 
-                  input(type="text" placeholder="Recipients" required)
+                  input(type="text" placeholder="Recipients" required).recipients
                 .col-3
-                  input(type="text" placeholder="Cc Bcc")
+                  input(type="text" placeholder="Cc Bcc").cc
             .col-12.p-0
               .row 
                 .container-fluid
-                  input(type="text" placeholder="Subject" required)
+                  input(type="text" placeholder="Subject" required).subject
             .container-fluid.px-0
               .row 
                 .container-fluid
-                  textarea#body-text(name="body" placeholder="Body Text" required) 
+                  textarea#body-text(name="body" placeholder="Body Text" required).body-text
           .composer-footer
             .container-fluid.py-2
               .row 
                 .col-6
-                  button(type="submit" title="Send mail")
+                  button(type="submit" title="Send mail").send
                     |send 
                 .col-6.text-right 
+                  button(type="button" title="attach file" disabled).clear
+                    i.fa.fa-paperclip(aria-hidden='true')
                   button(type="button" title="Delete").clear
                     i.fa.fa-trash(aria-hidden='true')
